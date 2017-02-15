@@ -92,3 +92,9 @@ db.namaCollection.find({ 'nama':'andika',
 									{'umur':21}
 								]
 						})
+
+//update data
+db.namaCollection.update({'nama':'andika'},{$set:{'umur':17}})
+
+//untuk data banyak diperlukan parameter tambahan
+db.namaCollection.update({'nama':'andika'},{$set:{'umur':17}},{multi:true})
