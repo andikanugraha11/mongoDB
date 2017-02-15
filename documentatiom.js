@@ -105,3 +105,14 @@ db.namaCollection.remove({'nama':'andika'})
 //select spesific query
 db.namaCollection.find({},{'nama':1,'_id':0}).pretty() //1 yes dan 0 no
 
+//limit, mengambil data sebanyak yang ditentukan
+db.namaCollection.find({},{'nama':1,'_id':0}).pretty().limit(5)
+
+//skip, mengambil data dengan mengabaikan beberapa data yang di tentukan
+db.namaCollection.find({},{'nama':1,'_id':0}).pretty().skip(3)
+
+//sort, mengurutkan data berdasarkan query tertentu (asc)
+db.namaCollection.find({},{'nama':1,'_id':0}).pretty().sort({'nama':1})
+
+
+db.namaCollection.find({},{'nama':1,'_id':0}).pretty().sort({'nama':1})
