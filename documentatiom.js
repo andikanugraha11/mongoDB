@@ -102,3 +102,6 @@ db.namaCollection.update({'nama':'andika'},{$set:{'umur':17}},{multi:true})
 //remove data
 db.namaCollection.remove({'nama':'andika'})
 
+//select spesific query
+db.namaCollection.find({},{'nama':1,'_id':0}).pretty() //1 yes dan 0 no
+
