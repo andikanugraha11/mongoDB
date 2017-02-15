@@ -98,3 +98,7 @@ db.namaCollection.update({'nama':'andika'},{$set:{'umur':17}})
 
 //untuk data banyak diperlukan parameter tambahan
 db.namaCollection.update({'nama':'andika'},{$set:{'umur':17}},{multi:true})
+
+//remove data
+db.namaCollection.remove({'nama':'andika'})
+
