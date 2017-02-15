@@ -114,5 +114,17 @@ db.namaCollection.find({},{'nama':1,'_id':0}).pretty().skip(3)
 //sort, mengurutkan data berdasarkan query tertentu (asc)
 db.namaCollection.find({},{'nama':1,'_id':0}).pretty().sort({'nama':1})
 
+//sort, mengurutkan data berdasarkan query tertentu (desc)
+db.namaCollection.find({},{'nama':1,'_id':0}).pretty().sort({'nama':-1})
 
-db.namaCollection.find({},{'nama':1,'_id':0}).pretty().sort({'nama':1})
+//skip dan limit
+db.namaCollection.find({},{'nama':1,'_id':0}).pretty().skip(3).limit(2)
+
+//cek index
+db.namaCollection.getIndexes()
+
+//set index
+db.namaCollection.ensureIndex({'npm':1})
+
+//drop index
+db.namaCollection.dropIndex({'npm':1})
