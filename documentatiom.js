@@ -128,3 +128,8 @@ db.namaCollection.ensureIndex({'npm':1})
 
 //drop index
 db.namaCollection.dropIndex({'npm':1})
+
+//aggregation
+db.users.aggregate([{$group: {_id : "$verified", Total:{$sum:1} }}])
+
+db.users.aggregate([{$group: {_id : "$gender", MaxAge :{$max:"$Age"} }}])
